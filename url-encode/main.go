@@ -7,5 +7,7 @@ import (
 )
 
 func main() {
-	fmt.Println(url.QueryEscape(os.Args[1]))
+	//url.QueryEscape: for application/x-www-form-urlencoded, " " -> "+"
+	//url.PathEscape: for url, " " -> "%20"
+	fmt.Println(url.PathEscape(os.Args[1]))
 }
